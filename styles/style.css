@@ -252,6 +252,17 @@
   }
 }
 
+@media (width >= 1024px) {
+  .main__causes {
+    margin-block-end: 60px;
+  }
+  .main__causes-list {
+    display: grid;
+    gap: var(--main-gap, 20px);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* causes-list, causes-list-item, advice, advice-list-wrapper, advice-list, advice-list-item */
 
 .main__advice-subtitle {
@@ -277,6 +288,12 @@
   }
   .main__gallery-subtitle {
     margin-block-end: var(--main-gap, 20px);
+  }
+}
+
+@media (width >= 1024px) {
+  .main__gallery {
+    margin-block-end: 60px;
   }
 }
 

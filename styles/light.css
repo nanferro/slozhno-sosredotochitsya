@@ -16,3 +16,7 @@
   --bg-image: url(../images/cover-image-light.png);
   }
 }
+
+.header__theme-dark-decoration {
+  display: none;
+}
