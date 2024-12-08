@@ -11,8 +11,6 @@
   background-attachment: fixed;
 }
 
-/* почему-то у меня марджины пошли наверх, переделать в адеквате */
-
 .header {
   position: relative;
   display: grid;
@@ -28,6 +26,7 @@
 @media (width >= 768px) {
   .header {
     padding: var(--main-gap, 20px);
+    margin-block-end: 60px;
   }
 }
 
@@ -72,7 +71,7 @@
   text-transform: uppercase;
   font-size: var(--main-font-size, 18px);
   line-height: 1.4;
-  inset-block-start: 10px;
+  inset-block-start: var(--main-mobile-gap, 10px);
   inset-inline-end: var(--main-gap, 20px);
   color: var(--accent-color, rgb(255, 0, 112));
   display: flex;
@@ -156,6 +155,7 @@
 @media (width >= 768px) {
   .header__main-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-inline-start: -20px;
   }
 }
 
@@ -165,7 +165,13 @@
   background-color: var(--accent-color, rgb(255, 0, 112));
   font-weight: var(--bold-font, 700);
   line-height: var(--main-line-height, 1.3);
-  inline-size: clamp(355px, 0.5vw, 491px);
+  inline-size: clamp(22.188rem, 21.651rem + 2.29vw, 22.75rem);
+}
+
+@media (width >= 768px) {
+  .header__main-description {
+    inline-size: clamp(22.75rem, -1.063rem + 49.609vw, 30.688rem);
+  }
 }
 
 .main__section {
@@ -176,11 +182,17 @@
 @media (width >= 768px) {
   .main__section {
     padding-inline: var(--main-gap, 20px);
-    margin-block-end: 80px;
+    margin-block-end: 60px;
   }
 }
 
-/* reasons */
+@media (width >= 768px) {
+  .main__section-grid {
+    display: grid;
+    grid-template-columns: 1fr clamp(29.5rem, -3.688rem + 69.141vw, 40.563rem);
+    gap: var(--main-gap, 20px);
+  }
+}
 
 .main__section-title {
   font-size: var(--main-font-size, 18px);
@@ -227,11 +239,20 @@
 }
 
 .main__causes {
-  padding-inline: var(--main-mobile-gap, 10px);
   margin-block-end: 50px;
 }
 
-/* causes, causes-list, causes-list-item, advice, advice-list, advice-list-item */
+@media (width >= 768px) {
+  .main__causes {
+    margin-block-end: 80px;
+  }
+  .main__causes-title {
+    display: block;
+    inline-size: clamp(14.75rem, -0.063rem + 30.859vw, 19.688rem);
+  }
+}
+
+/* causes-list, causes-list-item, advice, advice-list-wrapper, advice-list, advice-list-item */
 
 .main__advice-subtitle {
   margin-block-end: var(--main-gap, 20px);
@@ -250,18 +271,27 @@
   margin-block-end: 40px;
 }
 
+@media (width >= 768px) {
+  .main__gallery {
+    margin-block-end: 50px;
+  }
+  .main__gallery-subtitle {
+    margin-block-end: var(--main-gap, 20px);
+  }
+}
+
 .main__gallery-list {
   display: grid;
   gap: var(--main-mobile-gap, 10px);
-  grid-template-rows: clamp(142px, 20vh, 192px);
-  grid-auto-rows: clamp(355px, 52vh, 441px) clamp(237px, 35vh, 568px);
+  grid-template-rows: clamp(8.875rem, 5.893rem + 12.723vw, 12rem);
+  grid-auto-rows: clamp(22.188rem, 17.059rem + 21.883vw, 27.563rem) clamp(14.813rem, -4.927rem + 84.224vw, 35.5rem);
   grid-auto-flow: row;
 }
 
 @media (width >= 768px) {
   .main__gallery-list {
-    grid-template-columns: repeat(3, clamp(230px, 30vw, 315px));
-    grid-template-rows: clamp(192px, 25vw, 260px) 1fr clamp(318px, 41vw, 428px);
+    grid-template-columns: repeat(3, clamp(14.375rem, -1.563rem + 33.203vw, 19.688rem));
+    grid-template-rows: clamp(12rem, -0.75rem + 26.563vw, 16.25rem) 1fr clamp(19.875rem, -0.75rem + 42.969vw, 26.75rem);
     grid-auto-flow: dense;
     gap: var(--main-gap, 20px);
   }
