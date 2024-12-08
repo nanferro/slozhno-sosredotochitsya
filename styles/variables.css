@@ -8,9 +8,14 @@
   --bold-font: 700; 
   --main-font-size: 18px;
   --main-line-height: 1.3;
+  --main-mobile-gap: 10px;
+  --main-gap: 20px;
+  --bg-color: rgb(0, 24, 63);
   --title-color: rgb(219, 0, 255);
-  --accent-color: rgb(255, 0, 112);
-  --accent-color-theme-hover: rgba(255, 0, 112, 0.4);
   --subheading-color: rgb(0, 0, 40);
+  --accent-color: rgb(255, 0, 112);
+  --nav-color: rgb(255, 0, 112);
+  --nav-hover-color: rgba(255, 0, 112, 0.4);
   --text-color: rgb(241, 178, 206);
+  --bg-image: url(../images/cover-image-dark.png);
 }
