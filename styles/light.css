@@ -17,8 +17,10 @@
   }
 }
 
-.header__theme-dark-decoration {
-  display: none;
+.page.theme_light {
+  .header__theme-dark-decoration {
+    display: none;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,5 +33,9 @@
     --nav-hover-color: rgba(50, 49, 45, 0.4);
     --text-color: rgb(53, 52, 48);
     --bg-image: url(../images/cover-image-light.png);
+  }
+
+  .header__theme-dark-decoration {
+    display: none;
   }
 }
