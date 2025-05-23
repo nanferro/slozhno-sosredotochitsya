@@ -20,28 +20,43 @@
       <span class="header__theme-dark-decoration" aria-hidden="true">
         rec
       </span>
+      <div class="header__lang-switcher">
+        <button class="header__lang-button" id="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+          <img src="images/svg/ru.svg" aria-hidden="true" alt="" id="current-lang-flag">
+        </button>
+        <div class="header__lang-menu" id="lang-menu">
+          <button data-lang="ru" aria-label="Переключить на русский язык">
+            <img src="images/svg/ru.svg" aria-hidden="true" alt="">
+            Русский
+          </button>
+          <button data-lang="en" aria-label="Switch to English language">
+            <img src="images/svg/us.svg" aria-hidden="true" alt="">
+              English
+          </button>
+        </div>
+      </div>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
             <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              День
+              class="header__theme-menu-button header__theme-menu-button_type_light">
+              <span data-lang="ru" aria-hidden="false">День</span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">Day</span>
             </button>
           </li>
           <li class="header__theme-menu-item">
             <button
               class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              Авто
+              disabled>
+              <span data-lang="ru" aria-hidden="false">Авто</span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">Auto</span>
             </button>
           </li>
           <li class="header__theme-menu-item">
             <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              Неон
+              class="header__theme-menu-button header__theme-menu-button_type_dark">
+              <span data-lang="ru" aria-hidden="false">Неон</span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">Neon</span>
             </button>
           </li>
         </ul>
@@ -50,17 +65,39 @@
         no focus
       </h1>
       <p class="header__main-description title-decor">
-        Что делать, когда не можешь делать ничего <br>
-        Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+        <span data-lang="ru" aria-hidden="false">
+          Что делать, когда не можешь делать ничего <br>
+          Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+        </span>
+        <span data-lang="en" aria-hidden="true" style="display: none;">
+          What to do when you can't do anything <br>
+          or why it's so hard to focus, especially when you really need to
+        </span>
       </p>
     </header>
     <main class="main">
       <section class="main__section main__reasons">
-        <h2 class="main__section-title">Почему сосредоточиться так сложно</h2>
+        <h2 class="main__section-title">
+          <span data-lang="ru" aria-hidden="false">
+            Почему сосредоточиться так сложно
+          </span>
+          <span data-lang="en" aria-hidden="true" style="display: none;">
+            Why is it so hard to focus
+          </span>
+        </h2>
         <ul class="main__section-list">
           <li class="main__section-list-item">
-            <h3 class="main__section-subtitle title-decor">Многозадачность</h3>
-            <p class="main__section-text">Особенно сложно сосредоточиться, когда задач много и все они — важные. 
+            <h3 class="main__section-subtitle title-decor">
+              <span data-lang="ru" aria-hidden="false">
+                Многозадачность
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                Multitasking
+              </span>
+            </h3>
+            <p class="main__section-text">
+              <span data-lang="ru" aria-hidden="false">
+              Особенно сложно сосредоточиться, когда задач много и все они — важные. 
               Где же легендарная многозадачность, когда она так нужна вам (и всем нанимающим менеджерам этого мира)? 
               А дело в том, что её просто не существует. Исследователи 
               <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7075496/" target="_blank" class="main__section-text-link">выяснили</a>, 
@@ -68,124 +105,285 @@
               А когда в поле внимания попадает несколько важных задач, 
               организм паникует и выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы работаем невнимательно: 
               ошибаемся и быстро устаём.
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                It’s especially hard to focus when there are lots of tasks and all of them are important.
+                Where’s that legendary multitasking when you really need it (and so do all the hiring managers out there)?
+                The thing is — it just doesn’t exist. Researchers
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7075496/" target="_blank" class="main__section-text-link">found</a>
+                that the brain has a hard time focusing on even two things at once.
+                And when several important tasks enter your field of attention,
+                the body panics and releases cortisol and adrenaline — the “stress hormones.”
+                As a result, we work less attentively: we make mistakes and tire quickly.
+              </span>
             </p>
           </li>
           <li class="main__section-list-item">
-            <h3 class="main__section-subtitle title-decor">Дофамин</h3>
-            <p class="main__section-text">С гормонами стресса всё понятно, но дальше — ещё интереснее. 
-              В нашей невозможности сосредоточиться замешана и полная противоположность стрессу — дофамин. 
-              Это вещество участвует в системе вознаграждения мозга. Причём тут он? 
-              Мы часто отвлекаемся от важной задачи на что-то более «приятное» для мозгов. 
-              Например, смотрим лайки в соцсетях. В это время и выделяется дофамин — и мы чувствуем удовольствие. 
-              Получается замкнутый круг: чем больше отвлекаешься, тем больше удовольствия получаешь.
+            <h3 class="main__section-subtitle title-decor">
+              <span data-lang="ru" aria-hidden="false">Дофамин</span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">Dopamine</span>
+              </h3>
+            <p class="main__section-text">
+              <span data-lang="ru" aria-hidden="false">
+                С гормонами стресса всё понятно, но дальше — ещё интереснее. 
+                В нашей невозможности сосредоточиться замешана и полная противоположность стрессу — дофамин. 
+                Это вещество участвует в системе вознаграждения мозга. Причём тут он? 
+                Мы часто отвлекаемся от важной задачи на что-то более «приятное» для мозгов. 
+                Например, смотрим лайки в соцсетях. В это время и выделяется дофамин — и мы чувствуем удовольствие. 
+                Получается замкнутый круг: чем больше отвлекаешься, тем больше удовольствия получаешь.
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                Stress hormones are one thing—but what comes next is even more interesting.
+                Our inability to focus also involves the complete opposite of stress: dopamine.
+                This chemical is part of the brain’s reward system. So what does it have to do with anything?
+                We often get distracted from important tasks by things that feel more “pleasurable” to the brain.
+                Like checking likes on social media. That’s when dopamine kicks in — making us feel good.
+                And that creates a loop: the more you get distracted, the more pleasure you get.
+              </span>
             </p>
           </li>
         </ul>
       </section>
       <section class="main__section main__causes">
-        <h2 class="main__section-title main__causes-title">Что снижает концентрацию внимания?</h2>
+        <h2 class="main__section-title main__causes-title">
+          <span data-lang="ru" aria-hidden="false">
+            Что снижает концентрацию внимания?
+          </span>
+          <span data-lang="en" aria-hidden="true" style="display: none;">
+            What reduces focus?
+          </span>
+        </h2>
         <ul class="main__section-list main__causes-list">
           <li class="main__section-list-item">
-            <h3 class="main__section-subtitle title-decor">Многозадачность</h3>
+            <h3 class="main__section-subtitle title-decor">
+              <span data-lang="ru" aria-hidden="false">
+                Многозадачность
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                Multitasking
+              </span>
+            </h3>
             <p class="main__section-text">
-              Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация 
-              (и резко меняющийся мир в целом) заставляет наш мозг постоянно «сканировать» окружающую среду 
-              на предмет опасности. Например, читать новости вместо работы. Но быть собранными всё время 
-              — невозможно. Концентрация — мышца, и она может не выдержать, если не давать ей отдохнуть.
+              <span data-lang="ru" aria-hidden="false">
+                Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация 
+                (и резко меняющийся мир в целом) заставляет наш мозг постоянно «сканировать» окружающую среду 
+                на предмет опасности. Например, читать новости вместо работы. Но быть собранными всё время 
+                — невозможно. Концентрация — мышца, и она может не выдержать, если не давать ей отдохнуть.
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                How can focus drop because of… focus? Any stressful situation
+                (and a rapidly changing world in general) makes our brain constantly “scan” the environment
+                for potential threats. Like reading the news instead of working.
+                But staying focused all the time — just isn’t realistic. Focus is like a muscle,
+                and it can give out if you don’t let it rest.
+              </span>
             </p>
           </li>
           <li class="main__section-list-item">
-            <h3 class="main__section-subtitle title-decor">Еда</h3>
+            <h3 class="main__section-subtitle title-decor">
+              <span data-lang="ru" aria-hidden="false">
+                Еда
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                Food
+              </span>
+            </h3>
             <p class="main__section-text">
-              «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно доставляют в мозг энергию 
-              и помогают ему лучше работать. Но уходит эта энергия также быстро, как и приходит. 
-              А мы в результате попадаем на «углеводные качели»: как только действие «быстрых углеводов» 
-              заканчивается, мы чувствуем усталость и сонливость. И хотим ещё больше быстрых углеводов.
+              <span data-lang="ru" aria-hidden="false">
+                «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно доставляют в мозг энергию 
+                и помогают ему лучше работать. Но уходит эта энергия также быстро, как и приходит. 
+                А мы в результате попадаем на «углеводные качели»: как только действие «быстрых углеводов» 
+                заканчивается, мы чувствуем усталость и сонливость. И хотим ещё больше быстрых углеводов.
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                “Fast carbs” — sugar, white bread, sweets — deliver a quick hit of energy to the brain
+                and help it work better in the moment. But that energy disappears just as fast as it comes.
+                And we end up stuck on a “carb rollercoaster”: as soon as the fast carbs wear off,
+                we feel tired and drowsy. And we start craving even more fast carbs.
+              </span>
             </p>
           </li>
           <li class="main__section-list-item">
-            <h3 class="main__section-subtitle title-decor">Гаджеты</h3>
+            <h3 class="main__section-subtitle title-decor">
+              <span data-lang="ru" aria-hidden="false">
+                Гаджеты
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                Gadgets
+              </span>
+            </h3>
             <p class="main__section-text">
-              Да-да, это та самая ситуация, когда на экране ноутбука — код, в наушниках — подкаст, 
-              а на компьютере фоном — ещё и видео с забавными утятами. В результате мозг пытается переключиться 
-              с одной задачи на другую — и просто не может. А чтобы вернуться к состоянию полной концентрации, 
-              человеку в среднем нужно 20 минут. Вот и получается, что чем больше времени мы проводим в гаджетах, 
-              тем больше времени затем нужно, чтобы вернуться к работе.
+              <span data-lang="ru" aria-hidden="false">
+                Да-да, это та самая ситуация, когда на экране ноутбука — код, в наушниках — подкаст, 
+                а на компьютере фоном — ещё и видео с забавными утятами. В результате мозг пытается переключиться 
+                с одной задачи на другую — и просто не может. А чтобы вернуться к состоянию полной концентрации, 
+                человеку в среднем нужно 20 минут. Вот и получается, что чем больше времени мы проводим в гаджетах, 
+                тем больше времени затем нужно, чтобы вернуться к работе.
+              </span>
+              <span data-lang="en" aria-hidden="true" style="display: none;">
+                Yep, this is exactly that moment when there’s code on your laptop screen,
+                a podcast playing in your headphones, and a video of cute ducklings running in the background.
+                Your brain tries to jump from one task to another — and just can’t keep up.
+                And to fully get back into a focused state, it takes the average person around 20 minutes.
+                So the more time we spend juggling screens, the more time we end up needing just to get back to work.
+              </span>
             </p>
           </li>
         </ul>
       </section>
       <section class="main__section main__advice">
-        <h2 class="main__section-title">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</h2>
+        <h2 class="main__section-title">
+          <span data-lang="ru" aria-hidden="false">Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)</span>
+          <span data-lang="en" aria-hidden="true" style="display: none;">How to focus better than a goldfish (aka for longer than three seconds)</span>
+        </h2>
         <div class="main__advice-list-wrapper">
-          <h3 class="main__section-subtitle main__advice-subtitle title-decor">5 простых (на самом деле не очень) советов</h3>
+          <h3 class="main__section-subtitle main__advice-subtitle title-decor">
+            <span data-lang="ru" aria-hidden="false">5 простых (на самом деле не очень) советов</span>
+            <span data-lang="en" aria-hidden="true" style="display: none;">5 simple (okay, not really) tips</span>
+          </h3>
           <ul class="main__section-list">
             <li class="main__section-list-item">
-              <h4 class="main__advice-list-item-title title-decor">Представьте небо и облака</h4>
+              <h4 class="main__advice-list-item-title title-decor">
+                <span data-lang="ru" aria-hidden="false">Представьте небо и облака</span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">Imagine the sky and clouds</span>
+              </h4>
               <p class="main__section-text">
-                Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. 
-                Ведь часто именно тревожные мысли о сложных задачах как раз и мешают эти сложные задачи делать. 
-                В такие моменты можно закрыть глаза и представить, что чистое небо — это вы, 
-                а облака — тревожные мысли. И сколько бы их ни было — ясное небо всегда будет где-то там, за тучами, 
-                и никуда не денется. Это упражнение поможет вернуться в настоящий момент, а не волноваться 
-                о потенциальных проблемах из будущего.
+                <span data-lang="ru" aria-hidden="false">
+                  Или листья в ручье. Тут дело в лёгкой медитации, которая помогает успокоиться. 
+                  Ведь часто именно тревожные мысли о сложных задачах как раз и мешают эти сложные задачи делать. 
+                  В такие моменты можно закрыть глаза и представить, что чистое небо — это вы, 
+                  а облака — тревожные мысли. И сколько бы их ни было — ясное небо всегда будет где-то там, за тучами, 
+                  и никуда не денется. Это упражнение поможет вернуться в настоящий момент, а не волноваться 
+                  о потенциальных проблемах из будущего.
+                </span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">
+                  Or leaves in a stream. This is about light meditation—it helps you calm down.
+                  Because it’s often the anxious thoughts about hard tasks that actually keep us from doing those hard tasks.
+                  In moments like that, you can close your eyes and picture a clear sky as you,
+                  and the clouds as your anxious thoughts. No matter how many clouds there are,
+                  the clear sky is always there behind them — and it’s not going anywhere.
+                  This exercise helps bring you back to the present moment instead of stressing about
+                  possible problems in the future.
+                </span>
               </p>
             </li>
             <li class="main__section-list-item">
-              <h4 class="main__advice-list-item-title title-decor">Включите музыку</h4>
+              <h4 class="main__advice-list-item-title title-decor">
+                <span data-lang="ru" aria-hidden="false">Включите музыку</span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">Turn on some music</span>
+              </h4>
               <p class="main__section-text">
-                Но не любую, и не любимую. Любимая может быть связана с сильными положительными эмоциями, 
-                которые тоже очень сильно отвлекают. Подойдёт тихая, спокойная, умеренно-ритмичная. 
-                Можно вообще попробовать включить плейлист в «белым шумом» или нейромузыкой.
+                <span data-lang="ru" aria-hidden="false">
+                  Но не любую, и не любимую. Любимая может быть связана с сильными положительными эмоциями, 
+                  которые тоже очень сильно отвлекают. Подойдёт тихая, спокойная, умеренно-ритмичная. 
+                  Можно вообще попробовать включить плейлист в «белым шумом» или нейромузыкой.
+                </span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">
+                  But not just any music — and not your favorite kind, either.
+                  Your favorite tracks might be tied to strong positive emotions,
+                  which can be just as distracting. Go for something quiet, calm, with a steady rhythm.
+                  You could even try a playlist with white noise or neuro-music.
+                </span>
               </p>
             </li>
             <li class="main__section-list-item">
-              <h4 class="main__advice-list-item-title title-decor">Прогуляйтесь</h4>
+              <h4 class="main__advice-list-item-title title-decor">
+                <span data-lang="ru" aria-hidden="false">Прогуляйтесь</span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">Take a walk</span>
+              </h4>
               <p class="main__section-text">
-                Или даже пробегитесь. Лучше найти парк или лес: один эксперимент 
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank" class="main__section-text-link">показал</a>, 
-                что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей 
-                она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — 
-                так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка 
-                — тоже отличный вариант.
+                <span data-lang="ru" aria-hidden="false">
+                  Или даже пробегитесь. Лучше найти парк или лес: один эксперимент 
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank" class="main__section-text-link">показал</a>, 
+                  что созерцание природы повышает концентрацию, в то время как после просмотра городских пейзажей 
+                  она наоборот понижается. Можно совместить прогулку с физическими упражнениями или бегом — 
+                  так в мозг поступит ещё больше кислорода и он будет лучше работать. Но и простая двадцатиминутная прогулка 
+                  — тоже отличный вариант.
+                </span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">
+                  Or even go for a run. It’s best to find a park or some woods—one study 
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328" target="_blank" class="main__section-text-link">showed</a>
+                  that looking at nature boosts focus, while looking at cityscapes actually makes it worse.
+                  You can combine a walk with some exercise or a jog — your brain will get more oxygen and work better.
+                  But even a simple twenty-minute walk is a great option.
+                </span>
               </p>
             </li>
             <li class="main__section-list-item">
-              <h4 class="main__advice-list-item-title title-decor">Хорошо ешьте</h4>
+              <h4 class="main__advice-list-item-title title-decor">
+                <span data-lang="ru" aria-hidden="false">Хорошо ешьте</span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">Eat well</span>
+              </h4>
               <p class="main__section-text">
-                Мы — не ваша бабушка, но это правда важно. Выбирайте продукты, которые препятствуют 
-                резким скачкам сахара в крови. Например, с высоким содержанием клетчатки: 
-                овощи, ягоды, бобовые (нут, чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
+                <span data-lang="ru" aria-hidden="false">
+                  Мы — не ваша бабушка, но это правда важно. Выбирайте продукты, которые препятствуют 
+                  резким скачкам сахара в крови. Например, с высоким содержанием клетчатки: 
+                  овощи, ягоды, бобовые (нут, чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
+                </span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">
+                  We’re not your grandma, but this really does matter.
+                  Go for foods that help prevent blood sugar spikes.
+                  Think fiber-rich stuff: veggies, berries, legumes (like chickpeas, lentils, beans),
+                  brown rice, and whole wheat bread.
+                </span>
               </p>
             </li>
             <li class="main__section-list-item">
-              <h4 class="main__advice-list-item-title title-decor">Читайте</h4>
+              <h4 class="main__advice-list-item-title title-decor">
+                <span data-lang="ru" aria-hidden="false">Читайте</span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">Read</span>
+              </h4>
               <p class="main__section-text">
-                Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать пост в соцсети, 
-                достаточно нескольких минут или даже секунд. А вот интересная книга способна затянуть 
-                и на несколько часов и круто тренирует направленное внимание.
+                <span data-lang="ru" aria-hidden="false">
+                  Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы прочитать пост в соцсети, 
+                  достаточно нескольких минут или даже секунд. А вот интересная книга способна затянуть 
+                  и на несколько часов и круто тренирует направленное внимание.
+                </span>
+                <span data-lang="en" aria-hidden="true" style="display: none;">
+                  Real, paper books. They really do help with focus — reading a social media post takes a few minutes,
+                  maybe even seconds. But a good book can pull you in for hours and gives your attention span
+                  a serious workout.
+                </span>
               </p>
             </li>
           </ul>
         </div>
       </section>
       <section class="main__section main__gallery">
-        <h2 class="main__section-subtitle main__gallery-subtitle title-decor">А можно в картинках?</h2>
+        <h2 class="main__section-subtitle main__gallery-subtitle title-decor">
+          <span data-lang="ru" aria-hidden="false">А можно в картинках?</span>
+          <span data-lang="en" aria-hidden="true" style="display: none;">How about in pictures?</span>
+        </h2>
         <ul class="main__section-list main__gallery-list">
           <li class="main__section-list-item main__gallery-list-item">
-            <img class="main__gallery-image" src="images/sunset.png" loading="lazy" alt="Закат над морем.">
+            <img class="main__gallery-image" src="images/sunset.png" loading="lazy" 
+            alt="Закат над морем."
+            data-alt-ru="Закат над морем." 
+            data-alt-en="Sunset over the sea.">
           </li>
           <li class="main__section-list-item main__gallery-list-item">
-            <img class="main__gallery-image" src="images/ice-cream.png" loading="lazy" alt="Шарики мороженого в тарелке.">
+            <img class="main__gallery-image" src="images/ice-cream.png" loading="lazy" 
+            alt="Шарики мороженого в тарелке."
+            data-alt-ru="Шарики мороженого в тарелке." 
+            data-alt-en="Scoops of ice cream in a bowl.">
           </li>
           <li class="main__section-list-item main__gallery-list-item">
-            <img class="main__gallery-image" src="images/tape.png" loading="lazy" alt="Аудиокассета.">
+            <img class="main__gallery-image" src="images/tape.png" loading="lazy" 
+            alt="Аудиокассета."
+            data-alt-ru="Аудиокассета." 
+            data-alt-en="Audiocassette.">
           </li>
           <li class="main__section-list-item main__gallery-list-item">
-            <img class="main__gallery-image" src="images/books.png" loading="lazy" alt="Стопка книг.">
+            <img class="main__gallery-image" src="images/books.png" loading="lazy" 
+            alt="Стопка книг."
+            data-alt-ru="Стопка книг." 
+            data-alt-en="Stack of books.">
           </li>
           <li class="main__section-list-item main__gallery-list-item">
-            <img class="main__gallery-image" src="images/street.png" loading="lazy" alt="Японская улица.">
+            <img class="main__gallery-image" src="images/street.png" loading="lazy" 
+            alt="Японская улица."
+            data-alt-ru="Японская улица." 
+            data-alt-en="Japanese street.">
           </li>
         </ul>
       </section>
