@@ -1,6 +1,6 @@
 ## No Focus - responsive theme-aware bilingual page
 **Description:** Third study project in my Frontend Developer course at Yandex.Practicum.  
-Sprint 3 – "Layout, responsiveness, and graphics.   
+Sprint 3 – "Layout, responsiveness, and graphics."   
 [Demo availible](https://nanferro.github.io/slozhno-sosredotochitsya/) in English and Russian languages.
 
 🔧 Stack: HTML5, CSS3, vanilla JavaScript  
